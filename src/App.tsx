@@ -1,0 +1,23 @@
+import {
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+  RouterProvider,
+} from "react-router-dom";
+import LandingPage from "./pages/landingPage";
+import Login from "./components/auth/login";
+import Register from "./components/auth/register";
+
+const routers = createBrowserRouter(
+  createRoutesFromElements([
+    <Route path="/" element={<LandingPage />}></Route>,
+    <Route path="/login" element={<Login />}></Route>,
+    <Route path="/register" element={<Register />}></Route>,
+  ])
+);
+
+const App = () => {
+  return <RouterProvider router={routers}></RouterProvider>;
+};
+
+export default App;
