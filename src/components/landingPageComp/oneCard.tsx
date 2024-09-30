@@ -58,11 +58,11 @@ const OneCard = ({ items }: Iprops) => {
   const handleCloseDelete = () => setShowDelete(false);
   const handleShowDelete = () => setShowDelete(true);
   const [descriptionEdit, setDescriptionEdit] = useState(items.description);
-  const [imageFileEdit, setImageFileEdit] = useState(items.image);
+  // const [imageFileEdit, setImageFileEdit] = useState(items.image);
   const [catego, setCatego] = useState<any>(
     items.categoryID === null ? "" : items.categoryID
   );
-  const [postId, setPostId] = useState<any>(items.postId);
+  const postId: any = items.postId;
   // const [ImageFile ,setImageFile] = useState(null)
 
   const handleDecripEdit = (e: ChangeEvent<HTMLTextAreaElement>) => {
@@ -94,7 +94,7 @@ const OneCard = ({ items }: Iprops) => {
     const formData = new FormData();
     formData.append("PostId", postId);
     formData.append("Description", descriptionEdit);
-    formData.append("Image", imageFileEdit);
+    // formData.append("Image", imageFileEdit);
     formData.append("CategoryId", catego);
 
     await dispatch(EditPostAction(formData));
