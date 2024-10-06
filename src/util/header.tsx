@@ -33,6 +33,12 @@ const Header = () => {
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu className="w-100">
+                  {Isuser?.roles[0] ? (
+                    <Dropdown.Item href="/admin/add-category">
+                      Add category
+                    </Dropdown.Item>
+                  ) : null}
+
                   <Dropdown.Item onClick={OnLogout}>Logout</Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>

@@ -42,6 +42,8 @@ const AllCards = () => {
 
   // if (isLoading) return <h2>Loading ...</h2>;
 
+  
+
   return (
     <>
       <h1 className="mb-1  mt-4 col-12 col-md-7 m-auto">Posts</h1>

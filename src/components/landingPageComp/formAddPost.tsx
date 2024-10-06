@@ -139,7 +139,6 @@ const FormAddPost = () => {
                   return (
                     <option value={`${item.categoryId}`} key={index}>
                       {item.name}
-                      {item.categoryId}
                     </option>
                   );
                 })
